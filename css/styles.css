@@ -383,6 +383,7 @@ body {
   align-items: center;
 
   padding-top: 200px;
+  padding-bottom: 60px;
 }
 .start-page-text {
   flex: 0 0 50%;
@@ -501,6 +502,321 @@ body {
   opacity: 0.5;
 }
 
+.logos-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 70px;
+}
+.auto-logo {
+  width: 150px;
+  height: 150px;
+
+  padding: 0 10px;
+}
+.auto-logo:nth-child(1) img {
+  transform: scale(2.3);
+}
+.auto-logo:nth-child(5) img {
+  transform: scale(1.8);
+}
+.auto-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+  transition: 0.5s ease;
+}
+.auto-logo:hover img {
+  filter: grayscale(0);
+}
+.inner-section {
+  padding: 130px 0;
+}
+.about-section-body {
+  display: flex;
+  justify-content: space-between;
+}
+.about-section-column {
+  flex: 0 0 50%;
+}
+.section-title h2 {
+  font-size: 50px;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+.about-title {
+}
+.title {
+}
+.about-text {
+  margin-top: 80px;
+  width: 80%;
+}
+.section-paragraph {
+}
+.about-img {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.main-catalogue {
+  position: relative;
+}
+.main-catalogue-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-catalogue-bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+.main-catalogue-bg-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.072) 21.35%, rgba(0, 0, 0, 0) 48.01%, rgba(0, 0, 0, 0.072) 77.6%, rgba(0, 0, 0, 0.4) 100%);
+}
+.main-catalogue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-title {
+}
+.title {
+}
+.main-catalogue-subtitle {
+  width: 400px;
+}
+.main-catalogue-body {
+  display: flex;
+  margin-top: 90px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+.main-catalogue-column {
+  position: relative;
+
+  flex: 0 0 33.3%;
+  overflow: hidden;
+  height: 700px;
+
+  transition: 0.5s ease;
+}
+.main-catalogue-column:nth-child(1) img {
+}
+.main-catalogue-column:nth-child(2) img {
+  transform: scale(0.9);
+}
+.main-catalogue-column:nth-child(3) img {
+}
+.main-catalogue-column:hover .main-catalogue-link {
+  display: block;
+}
+.main-catalogue-column:hover .main-catalogue-link path {
+  stroke: var(--accent-color);
+}
+.main-catalogue-column:hover .main-catalogue-label {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+.main-catalogue-column:hover {
+  background: var(--accent-gradient);
+}
+.main-catalogue-column:hover img {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+.main-catalogue-column img {
+  filter: grayscale(1);
+  transition: 2s ease;
+}
+.main-catalogue-label {
+  position: absolute;
+
+  width: 80%;
+
+  bottom: 50px;
+  left: 0;
+
+  padding: 25px 40px;
+
+  border-radius: 0px 15px 15px 0px;
+  background: linear-gradient(180deg, rgba(255, 129, 40, 0.8) 0%, rgba(157, 65, 0, 0.8) 100%);
+}
+.main-catalogue-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 125%;
+}
+.main-catalogue-link {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 125%;
+
+  margin-top: 20px;
+  display: none;
+
+  transition: 0.5s ease;
+}
+.main-catalogue-link:hover {
+  filter: brightness(130%);
+}
+
+/* === OIL SELECTION === */
+
+.oil-selection {
+  position: relative;
+  margin: 130px 0;
+}
+.oil-selection-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.oil-selection-bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.container {
+}
+.oil-selection-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  background: rgba(16, 16, 16, 0.5);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+
+  padding: 50px 62px;
+}
+.section-title {
+}
+.title {
+}
+.oil-selection-text {
+  width: 60%;
+  margin: 30px auto;
+}
+.section-paragraph {
+}
+.oil-selection-selects {
+  display: flex;
+  justify-content: space-between;
+}
+.oil-selection-select {
+  position: relative;
+}
+.oil-kind {
+}
+.oil-select-body {
+  padding: 20px 15px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+.oil-select-body::after {
+  content: url('../img/main/start-page/submenu-arrow.svg');
+  margin-left: 10px;
+}
+.oil-select-options {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  background: rgba(16, 16, 16, 0.8);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+
+  display: none;
+
+  max-height: 122px;
+  overflow-y: auto;
+}
+.oil-select-options.active {
+  display: block;
+}
+.oil-select-option {
+  padding: 10px 5px;
+  cursor: pointer;
+
+  transition: 0.5s ease;
+}
+.oil-select-option:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+.select-hidden {
+  display: none;
+}
+.car-brand {
+}
+.car-model {
+}
+.oil-type {
+}
+.btn {
+}
+.oil-selection-btn {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  border: none;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 125%;
+  color: #FFFFFF;
+
+}
+
 @media(min-width: 1400px) {
   .start-page-img {
     overflow: visible;
@@ -531,6 +847,36 @@ body {
   }
   .start-page-title span {
     font-size: 70px;
+  }
+  .main-catalogue-title {
+    font-size: 36px;
+    line-height: 125%;
+  }
+  .main-catalogue-link {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .oil-selection-selects {
+    flex-direction: column;
+  }
+  .oil-selection-select:not(:first-child) {
+    margin-top: 25px;
+  }
+  .oil-select-body {
+    min-width: 290px;
+  }
+  .oil-select-options {
+    width: 290px;
+    z-index: 10;
+  }
+  .oil-selection-btn {
+    width: 290px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .oil-selection-body {
+    width: 800px;
+    margin: 0 auto;
   }
 }
 @media(max-width: 992px) {
@@ -636,6 +982,53 @@ body {
   .start-page-pagination {
     display: none;
   }
+  .about-section-body {
+    flex-direction: column;
+  }
+  .about-section-column {
+    flex: 1 0;
+  }
+  .section-title h2 {
+    font-size: 36px;
+  }
+  .about-text {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .about-section-column:nth-child(2) {
+    margin-top: 30px;
+  }
+  .inner-section {
+    padding: 60px 0;
+  }
+  .oil-selection {
+    position: relative;
+    margin: 60px 0;
+  }
+  .main-catalogue-title {
+    font-size: 32px;
+    line-height: 125%;
+  }
+  .main-catalogue-link {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .main-catalogue-label {
+    width: 90%;
+  }
+  .main-catalogue-column {
+    height: 500px;
+  }
+  .main-catalogue-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+  .oil-selection-text {
+    width: 85%;
+    margin: 30px auto;
+  }
 }
 @media(max-width: 768px) {
   .header-manager {
@@ -648,10 +1041,73 @@ body {
   .start-page-title span {
     font-size: 60px;
   }
+  .logos-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-top: 0px;
+  }
+  .section-title h2 {
+    font-size: 28px;
+  }
+  .main-catalogue-label {
+    padding: 15px 20px;
+  }
+  .main-catalogue-title {
+    font-size: 26px;
+    line-height: 125%;
+  }
+  .main-catalogue-link {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .oil-selection-body {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 @media(max-width: 576px) {
+  .main-catalogue-body {
+    flex-direction: column;
+  }
   .header-contacts {
     display: none;
+  }
+  .main-catalogue-title {
+    font-size: 20px;
+    line-height: 125%;
+  }
+  .main-catalogue-link {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .main-catalogue-label {
+    padding: 25px 40px;
+    width: 60%;
+  }
+  .main-catalogue-column {
+    max-height: 350px;
+  }
+  .main-catalogue-column img {
+    object-fit: contain;
+  }
+  .main-catalogue-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-catalogue-subtitle {
+    margin-top: 20px;
+  }
+  .main-catalogue-subtitle {
+    width: 100%;
+  }
+  .main-catalogue-label {
+    padding: 15px 20px;
+    width: 70%;
+  }
+  .oil-selection-body {
+    width: 100%;
+    padding: 30px 20px;
   }
 }
 @media(max-width: 425px) {
@@ -666,6 +1122,25 @@ body {
   }
   .header-logo a img {
     width: 80px;
+  }
+  .start-page-title {
+    font-size: 30px;
+    line-height: 105%;
+  }
+  .start-page-title span {
+    font-size: 40px;
+  }
+  .section-title h2 {
+    font-size: 22px;
+  }
+  .oil-select-body {
+    min-width: 260px;
+  }
+  .oil-selection-btn {
+    width: 260px;
+  }
+  .oil-select-options {
+    width: 260px;
   }
 }
 @media(max-width: 320px) {

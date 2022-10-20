@@ -50,3 +50,39 @@ let mainSwiper =new Swiper('.swiper', {
       type: 'fraction'
     }
 });
+
+// Селекты выбора масла
+
+// Управление select
+let oilSelects = document.querySelectorAll('.oil-select-body');
+let oilDropDowns = document.querySelectorAll('.oil-select-options');
+let hiddenInput = document.querySelector('.oil-selection-select select-hidden');
+
+oilSelects.forEach(btn => {
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    let thisDropDown = btn.closest('.oil-selection-select').querySelector('.oil-select-options');
+    thisDropDown.classList.toggle('active');
+  })
+})
+
+  // Присваиваем значение выбранной опции в селект
+
+  oilDropDowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function(e){
+      let thisSelect = dropdown.closest('.oil-selection-select')
+      thisSelect.querySelector('.oil-select-body').innerText = e.target.innerText
+      thisSelect.classList.remove('active');
+      dropdown.classList.remove('active');
+    })
+  })
+
+// Закрываем селект при клике не по нему
+
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.oil-selection-select')) {
+    oilSelects.forEach(select => select.classList.remove('active'))
+    oilDropDowns.forEach(dropdown => dropdown.classList.remove('active'))
+  }
+})
