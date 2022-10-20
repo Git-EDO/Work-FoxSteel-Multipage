@@ -890,6 +890,121 @@ body {
   stroke: var(--accent-color);
 }
 
+/* === FOOTER === */
+
+.footer {
+  padding: 30px 0 60px 0;
+}
+.container {
+}
+.footer-body {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-column {
+}
+.footer-logos-column {
+  display: flex;
+  align-items: center;
+}
+.footer-links-column {
+  display: flex;
+}
+.footer-contacts-column {
+  display: flex;
+}
+.footer-logos {
+}
+.APC-logo {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 250;
+  font-size: 54px;
+  line-height: 66px;
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, #F3F3F3 0%, #0D0D0D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  margin-left: 20px;
+}
+.footer-links:not(:first-child) {
+  margin-left: 50px;
+}
+.footer-links li {
+  font-size: 14px;
+  transition: 0.5s ease;
+  margin-top: 10px;
+}
+.footer-links li:hover {
+  color: var(--accent-color);
+}
+.scroll-link {
+  cursor: pointer;
+}
+.scroll-link path  {
+  transition: 0.5s ease;
+}
+.scroll-link:hover path {
+  stroke: var(--accent-color);
+
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+}
+.cta-color {
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-left: 50px;
+}
+.footer-contacts-tel {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 5px;
+
+  transition: 0.5s ease;
+}
+.footer-contacts-tel:hover {
+  filter: brightness(130%);
+}
+.footer-contacts-email {
+  transition: 0.5s ease;
+}
+.footer-contacts-email:hover {
+  color: var(--accent-color);
+}
+.footer-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 14px;
+
+  margin-top: 58px;
+}
+.footer-rights {
+}
+.footer-a {
+  display: flex;
+}
+.footer-a-text {
+  display: flex;
+  align-items: center;
+}
+.footer-a-logo {
+  padding: 6px 30px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
 @media(min-width: 1400px) {
   .start-page-img {
     overflow: visible;
@@ -950,6 +1065,13 @@ body {
   .oil-selection-body {
     width: 800px;
     margin: 0 auto;
+  }
+  .footer-logos-column {
+    flex-direction: column;
+  }
+  .APC-logo {
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
 @media(max-width: 992px) {
@@ -1102,6 +1224,39 @@ body {
     width: 85%;
     margin: 30px auto;
   }
+  .footer-body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-links-column {
+    margin-left: 0;
+    order: 1;
+    justify-content: center;
+  }
+  .footer-logos-column {
+    order: 3;
+    margin-top: 30px;
+    flex-direction: row;
+  }
+  .APC-logo {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+  .footer-contacts-column {
+    order: 2;
+    margin-top: 30px;
+  }
+  .footer-contacts {
+    text-align: center;
+    margin-left: 50px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 0 0 30%;
+  }
 }
 @media(max-width: 768px) {
   .header-manager {
@@ -1203,6 +1358,9 @@ body {
   .news-body {
     margin-top: 50px;
   }
+  .footer-links:not(:first-child) {
+    margin-left: 20px;
+  }
 }
 @media(max-width: 425px) {
   .header-burger {
@@ -1235,6 +1393,29 @@ body {
   }
   .oil-select-options {
     width: 260px;
+  }
+  .footer-links-column {
+    flex-direction: column;
+  }
+  .footer-links:not(:first-child) {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .footer-a {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-a-logo {
+    margin-left: 0px;
+  }
+  .footer-text {
+    flex-direction: column;
+  }
+  .footer-rights {
+    order: 2;
+    margin-top: 20px;
   }
 }
 @media(max-width: 320px) {
