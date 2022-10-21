@@ -86,3 +86,14 @@ document.addEventListener('click', function(e){
     oilDropDowns.forEach(dropdown => dropdown.classList.remove('active'))
   }
 })
+
+// Скролл из footer
+
+
+const footerScrollLink = document.querySelector('.scroll-link')
+
+footerScrollLink.addEventListener ('click', function(e) {
+  e.preventDefault();
+  const header = document.querySelector('.header')
+  header.scrollIntoView({block: "start", behavior: "smooth"});
+})

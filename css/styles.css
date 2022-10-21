@@ -1045,6 +1045,14 @@ body {
   .start-page-img::after {
     transform: translateX(5%);
   }
+  .oil-selection {
+    position: relative;
+    margin: 130px 0;
+    padding: 230px 0;
+  }
+  .oil-selection-bg img {
+    object-fit: cover;
+  }
 }
 @media(max-width: 1200px) {
   .header-phrase {
