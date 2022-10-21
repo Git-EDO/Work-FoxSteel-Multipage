@@ -320,6 +320,9 @@ body {
   color: var(--accent-color);
   font-size: 20px;
 }
+.second-row-nav li.active path {
+  stroke: var(--accent-color);
+}
 .second-row-nav li:hover {
   color: var(--accent-color);
 }
