@@ -1032,6 +1032,43 @@ body {
   margin-left: 10px;
 }
 
+
+/* === === CATALOGUE === === */
+
+.catalogue {
+  padding-top: 200px;
+}
+.cata-section-body {
+}
+.submenu-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.submenu-item {
+  font-size: 12px;
+  margin-left: 5px;
+
+  transition: 0.5s ease;
+}
+.submenu-item:hover {
+  color: var(--accent-color);
+}
+.submenu-item::before{
+  content: '/';
+}
+.submenu-main-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-color);
+}
+.submenu-main-item::before {
+  content: url('../img/main/start-page/house-icon.svg');
+  margin-right: 5px;
+}
+
+
 @media(min-width: 1400px) {
   .start-page-img {
     overflow: visible;
@@ -1230,6 +1267,9 @@ body {
   }
   .inner-section {
     padding: 60px 0;
+  }
+  .catalogue {
+    padding-top: 120px;
   }
   .oil-selection {
     position: relative;
