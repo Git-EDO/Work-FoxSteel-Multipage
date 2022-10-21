@@ -31,7 +31,34 @@ body {
   line-height: 125%;
   color: #fff;
 }
-
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--accent-gradient);
+  border-radius: 20px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #000;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+.custom-scrollbar {
+  scrollbar-width: 12px;
+  scrollbar-color: var(--accent-color);
+}
+.custom-mini-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--accent-gradient);
+  border-radius: 10px;
+}
+.custom-mini-scrollbar::-webkit-scrollbar-track {
+  background: #000;
+}
+.custom-mini-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-mini-scrollbar {
+  scrollbar-width: 5px;
+  scrollbar-color: var(--accent-color);
+}
 .wrapper {
 }
 
