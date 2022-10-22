@@ -189,7 +189,6 @@ const buyBtn = document.querySelector('.product-btn')
 const closePopup = document.querySelectorAll('.popup-close')
 const formPopup = document.querySelector('.form-popup')
 const thanksPopup = document.querySelector('.thanks-popup')
-// const popup = document.querySelector('.popup')
 
 if(buyBtn) {
   buyBtn.addEventListener('click', (e) => {
@@ -205,7 +204,6 @@ if(closePopup) {
       e.preventDefault()
       bodyUnlock()
       e.target.closest('.popup').classList.remove('active')
-      body.classList.remove('lock')
     })
   })
 }
@@ -214,19 +212,23 @@ if(closePopup) {
   document.addEventListener('click', (e) => {
     if(!e.target.closest('.popup-body') && !e.target.closest('.product-btn')) {
       bodyUnlock()
-      formPopup.classList.remove('active')
+      if(formPopup) {
+        formPopup.classList.remove('active')
+      }
     }
   })
 }
 
 const greatBtn = document.querySelector('.great-btn')
 
-greatBtn.addEventListener('click', (e) => {
-  e.preventDefault()
-  bodyUnlock()
-  thisPopup = e.target.closest('.popup')
-  thisPopup.classList.remove('active')
-})
+if(greatBtn) {
+  greatBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    bodyUnlock()
+    thisPopup = e.target.closest('.popup')
+    thisPopup.classList.remove('active')
+  })
+}
 
 // Маска для телефона
 
@@ -242,23 +244,26 @@ const mask = IMask(phones, maskOptions);
 
 const zoomImgs = document.querySelectorAll('.product-zoom-img')
 
-zoomImgs.forEach(img => {
-  let x,y,width, height;
+if (zoomImgs.length > 0) {
+  zoomImgs.forEach(img => {
+    let x,y,width, height;
+  
+    img.onmouseenter = () => {
+      const size = img.getBoundingClientRect();
+  
+      x = size.x;
+      y = size.y;
+      width = size.width;
+      height = size.height;
+    };
+  
+    img.onmousemove = e => {
+      const horizontal = (e.clientX - x) / width*100
+      const vertical = (e.clientY - y) / height*100
+  
+      img.style.setProperty('--x', horizontal + '%');
+      img.style.setProperty('--y', vertical + '%');
+    };
+  })
+}
 
-  img.onmouseenter = () => {
-    const size = img.getBoundingClientRect();
-
-    x = size.x;
-    y = size.y;
-    width = size.width;
-    height = size.height;
-  };
-
-  img.onmousemove = e => {
-    const horizontal = (e.clientX - x) / width*100
-    const vertical = (e.clientY - y) / height*100
-
-    img.style.setProperty('--x', horizontal + '%');
-    img.style.setProperty('--y', vertical + '%');
-  };
-})
