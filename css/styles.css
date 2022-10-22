@@ -1488,13 +1488,12 @@ input[type=number] {
   max-height: 415px;
 
   overflow: hidden;
-
 }
 .product-zoom-img:hover .zoom-icon {
   display: none;
 }
 .product-picture {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
