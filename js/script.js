@@ -139,17 +139,98 @@ const aside = document.querySelector('.goods-aside')
 const showAside = document.querySelector('.mobile-filters a')
 const closeFilters = document.querySelector('.goods-aside-close')
 
-showAside.addEventListener('click', (e) => {
-  e.preventDefault()
-  aside.classList.toggle('active')
-})
+if(showAside) {
+  showAside.addEventListener('click', (e) => {
+    e.preventDefault()
+    aside.classList.toggle('active')
+  })
+}
 
-document.addEventListener('click', (e) => {
-  if(!e.target.closest('.goods-aside') && !e.target.closest('.mobile-filters')) {
+if(aside) {
+  document.addEventListener('click', (e) => {
+    if(!e.target.closest('.goods-aside') && !e.target.closest('.mobile-filters')) {
+      aside.classList.remove('active')
+    }
+  })
+}
+
+if(closeFilters) {
+  closeFilters.addEventListener('click', () => {
     aside.classList.remove('active')
-  }
+  })
+}
+
+// Открытие попап-формы
+
+const buyBtn = document.querySelector('.product-btn')
+const closePopup = document.querySelectorAll('.popup-close')
+const formPopup = document.querySelector('.form-popup')
+const thanksPopup = document.querySelector('.thanks-popup')
+// const popup = document.querySelector('.popup')
+
+if(buyBtn) {
+  buyBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    formPopup.classList.add('active')
+  })
+}
+
+if(closePopup) {
+  closePopup.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault()
+      e.target.closest('.popup').classList.remove('active')
+    })
+  })
+}
+
+if(closePopup) {
+  document.addEventListener('click', (e) => {
+    if(!e.target.closest('.popup-body') && !e.target.closest('.product-btn')) {
+      formPopup.classList.remove('active')
+    }
+  })
+}
+
+const greatBtn = document.querySelector('.great-btn')
+
+greatBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  thisPopup = e.target.closest('.popup')
+  thisPopup.classList.remove('active')
 })
 
-closeFilters.addEventListener('click', () => {
-  aside.classList.remove('active')
+// Маска для телефона
+
+const phones = document.querySelector('.phone');
+
+const maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+
+const mask = IMask(phones, maskOptions);
+
+// Управление увеличением изображения
+
+const zoomImgs = document.querySelectorAll('.product-zoom-img')
+
+zoomImgs.forEach(img => {
+  let x,y,width, height;
+
+  img.onmouseenter = () => {
+    const size = img.getBoundingClientRect();
+
+    x = size.x;
+    y = size.y;
+    width = size.width;
+    height = size.height;
+  };
+
+  img.onmousemove = e => {
+    const horizontal = (e.clientX - x) / width*100
+    const vertical = (e.clientY - y) / height*100
+
+    img.style.setProperty('--x', horizontal + '%');
+    img.style.setProperty('--y', vertical + '%');
+  };
 })
