@@ -27,11 +27,33 @@ document.addEventListener('click', function(e){
 
 const burger = document.querySelector('.header-burger')
 const mobileMenu = document.querySelector('.second-row')
+const body = document.querySelector('body')
 
 burger.addEventListener('click', () => {
+  body.classList.toggle('lock')
   burger.classList.toggle('active')
   mobileMenu.classList.toggle('active')
 })
+
+// Body lock
+
+function bodyLock() {
+  const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
+
+  lockPaddingEls.forEach(element => {
+    element.style.paddingRight = lockPaddingValue;
+  });
+
+  body.classList.add('lock');
+}
+
+function bodyUnlock() {
+  lockPaddingEls.forEach(element => {
+    element.style.paddingRight = 0;
+  })
+
+  body.classList.remove('lock')
+}
 
 // Слайдер на главной
 

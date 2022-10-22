@@ -31,6 +31,9 @@ body {
   line-height: 125%;
   color: #fff;
 }
+body.lock {
+  overflow-y: hidden;
+}
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: var(--accent-gradient);
   border-radius: 20px;
@@ -2495,6 +2498,8 @@ margin-top: 90px;
   .char-name {
     font-weight: 500;
     font-size: 18px;
+  }.lang-select-options {
+    left: 15px;
   }
 }
 @media(max-width: 320px) {
