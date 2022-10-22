@@ -28,6 +28,7 @@ document.addEventListener('click', function(e){
 const burger = document.querySelector('.header-burger')
 const mobileMenu = document.querySelector('.second-row')
 const body = document.querySelector('body')
+const lockPaddingEls = document.querySelectorAll('.lock-padding')
 
 burger.addEventListener('click', () => {
   body.classList.toggle('lock')
@@ -193,6 +194,7 @@ const thanksPopup = document.querySelector('.thanks-popup')
 if(buyBtn) {
   buyBtn.addEventListener('click', (e) => {
     e.preventDefault()
+    bodyLock()
     formPopup.classList.add('active')
   })
 }
@@ -201,7 +203,9 @@ if(closePopup) {
   closePopup.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault()
+      bodyUnlock()
       e.target.closest('.popup').classList.remove('active')
+      body.classList.remove('lock')
     })
   })
 }
@@ -209,6 +213,7 @@ if(closePopup) {
 if(closePopup) {
   document.addEventListener('click', (e) => {
     if(!e.target.closest('.popup-body') && !e.target.closest('.product-btn')) {
+      bodyUnlock()
       formPopup.classList.remove('active')
     }
   })
@@ -218,6 +223,7 @@ const greatBtn = document.querySelector('.great-btn')
 
 greatBtn.addEventListener('click', (e) => {
   e.preventDefault()
+  bodyUnlock()
   thisPopup = e.target.closest('.popup')
   thisPopup.classList.remove('active')
 })
