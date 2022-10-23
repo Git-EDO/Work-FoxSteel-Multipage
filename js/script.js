@@ -211,7 +211,6 @@ if(closePopup) {
 if(closePopup) {
   document.addEventListener('click', (e) => {
     if(!e.target.closest('.popup-body') && !e.target.closest('.product-btn')) {
-      bodyUnlock()
       if(formPopup) {
         formPopup.classList.remove('active')
       }
