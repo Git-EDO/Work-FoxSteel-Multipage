@@ -301,6 +301,39 @@ if (zoomImgs.length > 0) {
   })
 }
 
+// Transmission tabs
+
+const transmTabs = document.querySelectorAll('.tab-transmission')
+const tabsContent = document.querySelectorAll('.tabs-section .product-info')
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.tab-mechanical').classList.add('active')
+  document.querySelector('.tab-mechanical').classList.add('cta-color')
+})
+
+if(transmTabs.length > 0) {
+
+  transmTabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+
+      tabsContent.forEach(tabContent => {
+        tabContent.style.display = 'none'
+      })
+      transmTabs.forEach(item => {
+        item.classList.remove('cta-color')
+        item.classList.remove('active')
+      })
+
+      tab.classList.add('active')
+      tab.classList.add('cta-color')
+
+      const tabID = tab.querySelector('a')
+      const newTab = tabID.hash.replace('#','')
+      document.getElementById(newTab).style.display = 'flex'
+    })
+  })
+}
+
 // Галерея
 
 $(document).ready(function() {
@@ -312,3 +345,5 @@ $('.certificates-grid').magnificPopup({
   type: 'image'
   // other options
 });
+
+
