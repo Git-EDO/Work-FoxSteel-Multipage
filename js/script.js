@@ -74,6 +74,24 @@ let mainSwiper =new Swiper('.swiper', {
     }
 });
 
+// Слайдер новостей
+
+let newsSwiper =new Swiper('.news-swiper', {
+
+  // Optional parameters
+  slidesPerView: 1,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.pagination-arrow-right',
+      prevEl: '.pagination-arrow-left',
+    },
+    pagination: {
+      el: '.slider-counter',
+      type: 'fraction'
+    }
+});
+
 // Селекты выбора масла
 
 // Управление select
