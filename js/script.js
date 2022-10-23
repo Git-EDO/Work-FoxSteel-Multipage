@@ -189,6 +189,7 @@ const buyBtn = document.querySelector('.product-btn')
 const closePopup = document.querySelectorAll('.popup-close')
 const formPopup = document.querySelector('.form-popup')
 const thanksPopup = document.querySelector('.thanks-popup')
+const popups = document.querySelectorAll('.popup')
 
 if(buyBtn) {
   buyBtn.addEventListener('click', (e) => {
@@ -208,13 +209,26 @@ if(closePopup) {
   })
 }
 
+// if(closePopup) {
+//   document.addEventListener('click', (e) => {
+//     if(!e.target.closest('.popup-body') && !e.target.closest('.product-btn')) {
+//       if(formPopup) {
+//         formPopup.classList.remove('active')
+//       }
+//     }
+//   })
+// }
+
 if(closePopup) {
-  document.addEventListener('click', (e) => {
-    if(!e.target.closest('.popup-body') && !e.target.closest('.product-btn')) {
-      if(formPopup) {
-        formPopup.classList.remove('active')
+  popups.forEach(field => {
+    field.addEventListener('click', (e) => {
+      if(!e.target.closest('.popup-body')) {
+        if(formPopup) {
+          formPopup.classList.remove('active')
+          bodyUnlock()
+        }
       }
-    }
+    })
   })
 }
 
