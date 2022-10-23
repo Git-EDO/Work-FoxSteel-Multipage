@@ -265,11 +265,14 @@ if(greatBtn) {
 
 const phones = document.querySelector('.phone');
 
-const maskOptions = {
-  mask: '+{7}(000)000-00-00'
-};
+if(phones) {
+  const maskOptions = {
+    mask: '+{7}(000)000-00-00'
+  };
+  
+  const mask = IMask(phones, maskOptions);
+}
 
-const mask = IMask(phones, maskOptions);
 
 // Управление увеличением изображения
 
@@ -298,3 +301,14 @@ if (zoomImgs.length > 0) {
   })
 }
 
+// Галерея
+
+$(document).ready(function() {
+  $('.certificate-item').magnificPopup({type:'image'});
+});
+
+$('.certificates-grid').magnificPopup({
+  delegate: 'a',
+  type: 'image'
+  // other options
+});

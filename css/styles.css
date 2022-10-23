@@ -2077,6 +2077,86 @@ margin-top: 90px;
   align-self: center;
 }
 
+/* === SINGLE - NEWS === */
+
+.single-news-content {
+  margin-top: 80px;
+}
+.single-news-image {
+  overflow: hidden;
+  border-radius: 10px;;
+}
+.single-news-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.single-news-content .section-paragraph {
+  margin-top: 60px;
+}
+
+/* === CERTIFICATES === */
+
+.certificates-content {
+
+}
+.certificates-grid {
+  margin-top: 80px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-rows: auto;
+  row-gap: 22px;
+  column-gap: 22px;
+
+  justify-items: center;
+}
+.certificate-item {
+  position: relative;
+  padding: 28px 20px;
+
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  max-width: 250px;
+}
+.certificate-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.certificate-item:hover .certificate-item-cover {
+  display: flex;
+}
+.certificate-item-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 30px;
+
+  display: none;
+}
+.certificate-item-cover::after {
+  content: url('../img/certificates/zoom-in.svg');
+  position: absolute;
+  bottom: 35px;
+  right: 25px;
+}
+
 @media(min-width: 1400px) {
   .start-page-img {
     overflow: visible;
