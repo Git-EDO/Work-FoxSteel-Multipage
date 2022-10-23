@@ -2140,6 +2140,9 @@ margin-top: 90px;
   height: 100%;
   z-index: 3;
 
+  font-weight: 600;
+  font-size: 20px;
+
   background: rgba(0, 0, 0, 0.5);
 
   display: flex;
@@ -2155,6 +2158,38 @@ margin-top: 90px;
   position: absolute;
   bottom: 35px;
   right: 25px;
+}
+
+/* === CONTACTS === */
+
+.contacts-content {
+  display: flex;
+}
+.contacts-column:first-child {
+  flex: 0 0 40%;
+}
+.contacts-column:last-child {
+  flex: 0 0 60%;
+}
+.contacts-info {
+  margin-top: 60px;
+}
+.contacts-item {
+  margin-top: 30px;
+  width: 70%;
+}
+.contacts-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+.contacts-text {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 18px;
+}
+.contacts-map {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 @media(min-width: 1400px) {
@@ -2626,6 +2661,12 @@ margin-top: 90px;
     justify-content: center;
     align-items: center;
   }
+  .contacts-column:first-child {
+    flex: 0 0 50%;
+  }
+  .contacts-column:last-child {
+    flex: 0 0 50%;
+  }
 }
 @media(max-width: 630px) {
   .goods-grid-container {
@@ -2745,6 +2786,19 @@ margin-top: 90px;
   .technologies-image-bottom-block {
     padding: 10px 0 0 10px;
   }
+  .contacts-content {
+    flex-direction: column;
+  }
+  .contacts-column:first-child {
+    flex: 1 0 50%;
+  }
+  .contacts-column:last-child {
+    flex: 1 0 50%;
+    margin-top: 30px;
+  }
+  .contacts-item {
+    width: 80%;
+  }
 }
 @media(max-width: 425px) {
   .header-burger {
@@ -2815,6 +2869,9 @@ margin-top: 90px;
   }
   .about-company .start-page-title {
     font-size: 28px;
+  }
+  .contacts-item {
+    width: 100%;
   }
 }
 @media(max-width: 320px) {
