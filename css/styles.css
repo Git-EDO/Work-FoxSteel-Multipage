@@ -826,6 +826,7 @@ body.lock {
 
   max-height: 122px;
   overflow-y: auto;
+  z-index: 3;
 }
 .oil-select-options.active {
   display: block;
@@ -1929,6 +1930,129 @@ margin-top: 90px;
 .start-page-subtitle {
 }
 
+/* === TECHNOLOGIES === */
+
+.technologies-content {
+  margin-top: 80px;
+}
+.section-paragraph {
+}
+.technologies-image {
+  margin-top: 60px;
+  position: relative;
+
+  border-radius: 15px;
+  overflow: hidden;
+}
+.engine-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.09);
+}
+.technologies-image-top-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 2;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 0px 0px 20px 0px;
+
+  padding: 20px 30px;
+}
+.technologies-image-top-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.technologies-image-bottom-block {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  z-index: 2;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 20px 0px;
+
+  padding: 20px 0 0 20px;
+}
+.technologies-image-bottom-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === TECHNOLOGIES === */
+.technologies-video-section {
+  margin-bottom: 100px;
+}
+.technologies-video {
+  margin-top: 80px;
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 15px;
+}
+.section-paragraph {
+}
+.technologies-video-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.technologies-video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+/* === OIL-CHOOSING === */
+
+.oil-choosing-content {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  display: flex;
+}
+.oil-choosing-image {
+  flex: 0 0 50%;
+}
+.oil-choosing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+}
+.oil-choosing-content .oil-selection-body {
+  box-shadow: none;
+  margin-left: 55px;
+  padding: 0;
+  justify-content: flex-start;
+  width: 100%;
+}
+.oil-choosing-content .oil-selection-selects {
+  flex-direction: column;
+}
+.oil-choosing-content .oil-selection-select .oil-select-body {
+  display: flex;
+  width: 100%;
+}
+.oil-choosing-content .oil-selection-select {
+  margin-top: 20px;
+}
+.oil-choosing-content .oil-selection-btn {
+  width: 250px;
+  margin-top: 30px;
+}
 
 @media(min-width: 1400px) {
   .start-page-img {
@@ -2296,6 +2420,20 @@ margin-top: 90px;
   .about-company .start-page-text{
     text-align: center;
   }
+  .technologies-image-top-block {
+    width: 20%;
+  }
+  .technologies-image-top-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .technologies-image-bottom-block {
+    width: 50%;
+    height: 70%;
+  }
+  .technologies-image-bottom-block img {
+  }
 }
 @media(max-width: 768px) {
   .header-manager {
@@ -2376,6 +2514,14 @@ margin-top: 90px;
   }
   .about-company .start-page-subtitle{
     width: 80%;
+  }
+  .oil-choosing-content {
+    flex-direction: column;
+  }
+  .oil-choosing-content .oil-selection-body {
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media(max-width: 630px) {
@@ -2489,6 +2635,12 @@ margin-top: 90px;
   .zoom-icon {
     width: 40px;
     height: 40px;
+  }
+  .technologies-image-top-block {
+    padding: 10px 15px;
+  }
+  .technologies-image-bottom-block {
+    padding: 10px 0 0 10px;
   }
 }
 @media(max-width: 425px) {
