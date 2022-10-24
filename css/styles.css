@@ -3133,6 +3133,101 @@ input[type=number] {
   text-fill-color: transparent;
 }
 
+/* === CART === */
+
+.cart-content .advice-oil-item {
+  margin-left: 0;
+  justify-content: space-between;
+  width: 100%;
+}
+.cart-content .advice-item {
+}
+.cart-content .advice-oil-item-product-img {
+  width: 200px;
+  height: 190px;
+}
+.cart-content .advice-oil-item-btns {
+  margin-top: 0;
+}
+.cart-content .advice-oil-item-btns .goods-filter-price-input {
+  position: relative;
+  width: 100px;
+}
+.cart-content .advice-oil-item-btns .goods-filter-price-input input[type=number]{
+  padding: 0 20px;
+}
+.cart-content .goods-filter-price-input .quantity-arrow-plus {
+  position: absolute;
+}
+.cart-content .goods-filter-price-input .quantity-arrow-minus {
+  position: absolute;
+}
+.cart-content .advice-item {
+  flex-direction: column;
+}
+.cart-content .advice-oil-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.cart-total {
+}
+.container {
+}
+.cart-total-body {
+  display: flex;
+}
+.cart-total-text {
+  flex: 0 0 50%;
+  padding-right: 20px;
+}
+.cart-total-counter {
+  flex: 0 0 50%;
+  
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.cart-total-counter-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.cart-total-counter-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.1;
+}
+.cart-total-counter img {
+  flex: 0 0 50%;
+}
+.cart-total-counter-title {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 700;
+  font-size: 25px;
+}
+.cart-total-counter-text {
+}
+.cart-total-counter-number {
+}
+.cart-counter-btn {
+  margin-top: 30px;
+
+  width: 280px;
+  margin-left: auto;
+}
+
 @media(max-width: 1400px) {
   .goods-grid-container {
     grid-template-columns: repeat(2, 1fr);
@@ -3842,6 +3937,13 @@ input[type=number] {
     max-width: 250px;
   }
 
+  .cart-total-body {
+    flex-direction: column;
+  }
+  .cart-total-counter {
+    margin-top: 20px;
+  }
+
 }
 
 @media(max-width: 630px) {
@@ -4066,7 +4168,9 @@ input[type=number] {
  .advice-btn {
   width: 100%;
   }
-
+  .cart-content .advice-oil-item-buttons {
+    align-items: center;
+  }
 }
 
 @media(max-width: 425px) {
@@ -4179,6 +4283,13 @@ input[type=number] {
   .advantage-title {
     font-size: 18px;
   }
+  .cart-total-counter {
+    padding: 30px 15px;
+  }
+  .cart-counter-btn {
+    width: 100%;
+    margin: 30px auto 0 auto;
+  } 
 }
 
 @media(max-width: 320px) {
