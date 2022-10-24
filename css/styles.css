@@ -2840,6 +2840,299 @@ input[type=number] {
   }
 }
 
+/* === ADVANTAGES === */
+
+.advantages {
+  position: relative;
+  min-height: 90vh;
+
+  padding: 100px 0 130px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.advantages-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.advantages-bg-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.advantages-body {
+  padding: 58px 76px;
+  background: rgba(16, 16, 16, 0.5);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+}
+.advantages-body .section-title {
+  text-align: center;
+}
+.advantages-row {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.advantage-item {
+  flex: 0 0 45%;
+  margin-top: 50px;
+  position: relative;
+
+  margin-left: 30px;
+
+  min-width: 280px;
+}
+.advantage-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 110px;
+  width: 15px;
+
+  background: var(--accent-gradient);
+}
+.advantage-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 105%;
+
+  text-transform: uppercase;
+}
+.advantage-text {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* === ADVICE === */
+
+.advice-mobile-header {
+  display: none;
+}
+
+.advice-section {
+}
+.advice-subtitle {
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 20px;
+}
+.advice-body {
+  margin-top: 80px;
+}
+.advice-header {
+  position: relative;
+  display: flex;
+
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  background: linear-gradient(180deg, #F3F3F3 0%, #0D0D0D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.advice-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgb(243,243,240);
+  background: radial-gradient(circle, rgba(243,243,240,1) 0%, rgba(13,13,0,1) 100%);
+}
+
+.advice-header-item:first-child {
+  flex: 0 0 30%;
+
+  text-align: center;
+}
+
+.advice-header-item:last-child {
+  flex: 0 0 70%;
+}
+
+.advice-item {
+  position: relative;
+  margin-top: 60px;
+
+  display: flex;
+}
+
+.second-advice-item::after,
+.third-advice-item::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgb(243,243,240);
+  background: radial-gradient(circle, rgba(243,243,240,1) 0%, rgba(13,13,0,1) 100%);
+}
+
+.advice-item-wrapper {
+  display: flex;
+}
+.advice-item-title {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 20%;
+}
+.advice-title-item {
+  display: flex;
+  flex-direction: column;
+}
+.advice-title-item-name {
+  font-weight: 500;
+  font-size: 18px;
+}
+.advice-title-item-name:not(:first-child) {
+  margin-top: 25px;
+}
+.advice-title-item-value {
+  margin-top: 15px;
+  font-weight: 300;
+  font-size: 18px;
+}
+.advice-item-oil {
+  display: flex;
+  flex-direction: column;
+}
+.advice-oil-item {
+  display: flex;
+  align-items: center;
+
+  padding: 25px;
+
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-left: 50px;
+}
+.advice-oil-item:last-child {
+  margin-top: 20px;
+}
+.advice-oil-item-wrapper {
+  display: flex;
+  align-items: center;
+}
+.advice-oil-item-product {
+  display: flex;
+  align-items: center;
+}
+.advice-oil-item-product-img {
+  width: 200px;
+  height: 150px;
+}
+.advice-oil-item-product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.advice-oil-item-product-text {
+  margin-left: 35px;
+  max-width: 250px;
+}
+.advice-oil-item-product-label {
+  font-size: 12px;
+}
+.advice-oil-item-product-name {
+  font-weight: 700;
+  font-size: 25px;
+  margin: 10px 0;
+}
+.advice-oil-item-product-description {
+  font-size: 12px;
+}
+.advice-oil-item-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+}
+.advice-oil-item-btn {
+
+}
+.advice-oil-item-btn a::after {
+  content: '';
+  margin-left: 0;
+}
+.advice-btn {
+  padding: 12.5px 26.5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.advice-oil-item-btns {
+  display: flex;
+  margin-top: 5px;
+}
+.advice-oil-item-btns .goods-filter-price-input input[type=number] {
+  padding: 0 15px;
+  padding-left: 0;
+}
+.advice-oil-item-btns .goods-filter-price-input {
+  width: 60px;
+}
+.advice-oil-item-btns .goods-add-to-cart {
+  width: 100%;
+  margin-left: 5px;
+}
+.goods-add-to-cart {
+}
+.advice-oil-item-links {
+  margin-left: 35px;
+
+  display: inline-flex;
+  text-align: center;
+  flex-direction: column;
+  min-width: 252px;
+}
+.tds-link {
+  font-weight: 300;
+  font-size: 16px;
+  position: relative;
+
+  transition: 0.5s ease;
+}
+.tds-link:hover {
+  filter: brightness(130%);
+}
+.tds-link::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  bottom: 2px;
+  left: 0;
+  background: linear-gradient(180deg, #FF8128 0%, #9D4100 100%);
+}
+.msds-link {
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+.apc-color {
+  background: linear-gradient(180deg, #F3F3F3 0%, #0D0D0D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 @media(max-width: 1400px) {
   .goods-grid-container {
     grid-template-columns: repeat(2, 1fr);
@@ -2923,6 +3216,78 @@ input[type=number] {
     margin-left: 0;
     margin-top: 20px;
   }
+  .advice-item-wrapper {
+    flex-direction: column;
+  }
+  .advice-header {
+    display: none;
+  }
+  .advice-oil-item {
+    margin-left: 0;
+    justify-content: space-between;
+  }
+  .advice-oil-item-product-img {
+    height: 180px;
+  }
+  .advice-oil-item-product-img img {
+    object-fit: contain;
+  }
+  .advice-item-title {
+    flex: 1 0 20%;
+    margin-bottom: 30px;
+  }
+  .advice-item-wrapper:nth-child(1) .advice-item-title {
+    display: none;
+  }
+  .advice-mobile-header {
+    position: relative;
+    display: flex;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+  }
+  .advice-mobile-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgb(243,243,240);
+    background: radial-gradient(circle, rgba(243,243,240,1) 0%, rgba(13,13,0,1) 100%);
+  }
+  .advice-item {
+    flex-direction: column;
+  }
+  .advice-item:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: none;
+    background: none;
+  }
+
+  .second-advice-item::after,
+  .third-advice-item::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: none;
+    background: none;
+  }
+
 }
 
 @media(max-width: 992px) {
@@ -3289,6 +3654,20 @@ input[type=number] {
     display: inline-flex;
     flex-direction: column;
   }
+
+  .advice-oil-item-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .advice-oil-item-links {
+    margin-left: 0;
+    margin-top: 35px;
+  }
+
+  .advice-oil-item-buttons {
+    margin-left: 0;
+  }
 }
 
 @media(max-width: 768px) {
@@ -3444,6 +3823,25 @@ input[type=number] {
   .recommendation-bullets {
     flex: 0 0 80%;
   }
+
+  .advantages-body {
+    padding: 30px 45px;
+  }
+
+  .advantage-title {
+    font-size: 22px;
+  }
+
+  .advice-oil-item-product {
+    flex-direction: column;
+  }
+
+  .advice-oil-item-product-text {
+    margin-left: 0;
+    margin-top: 35px;
+    max-width: 250px;
+  }
+
 }
 
 @media(max-width: 630px) {
@@ -3648,6 +4046,27 @@ input[type=number] {
   .recommendation-bullets {
     flex: 0 0 90%;
   }
+
+  .advantages-body {
+    padding: 30px 15px;
+ }
+
+ .advice-oil-item {
+  flex-direction: column;
+ }
+
+ .advice-oil-item-wrapper {
+  margin-top: 20px;
+ }
+
+ .advice-oil-item-buttons {
+  width: 250px;
+ }
+
+ .advice-btn {
+  width: 100%;
+  }
+
 }
 
 @media(max-width: 425px) {
@@ -3757,6 +4176,9 @@ input[type=number] {
   .recommendation-bullet {
     padding: 13px 15px;
   }
+  .advantage-title {
+    font-size: 18px;
+  }
 }
 
 @media(max-width: 320px) {
@@ -3783,5 +4205,11 @@ input[type=number] {
 
   .tabs-header a {
     font-size: 36px;
+  }
+  .advantages-body {
+    padding: 30px 0;
+  }
+  .advantages {
+    overflow-x: hidden;
   }
 }
