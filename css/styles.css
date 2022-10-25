@@ -4639,9 +4639,6 @@ margin-top: 10px;
     justify-content: center;
     padding: 20px 5px;
   }
-}
-
-@media(max-width: 320px) {
   .char-value {
     font-size: 12px;
   }
@@ -4649,6 +4646,10 @@ margin-top: 10px;
   .char-name {
     font-size: 14px;
   }
+}
+
+@media(max-width: 320px) {
+
 
   .success-notification {
     right: -160px;
