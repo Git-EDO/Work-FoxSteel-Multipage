@@ -203,17 +203,19 @@ if(closeFilters) {
 
 // Открытие попап-формы
 
-const buyBtn = document.querySelector('.product-btn')
+const buyBtn = document.querySelectorAll('.product-btn')
 const closePopup = document.querySelectorAll('.popup-close')
 const formPopup = document.querySelector('.form-popup')
 const thanksPopup = document.querySelector('.thanks-popup')
 const popups = document.querySelectorAll('.popup')
 
-if(buyBtn) {
-  buyBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    bodyLock()
-    formPopup.classList.add('active')
+if(buyBtn.length >= 0) {
+  buyBtn.forEach(btn => {
+    btn.  addEventListener('click', (e) => {
+      e.preventDefault()
+      bodyLock()
+      formPopup.classList.add('active')
+    })
   })
 }
 
@@ -307,8 +309,10 @@ const transmTabs = document.querySelectorAll('.tab-transmission')
 const tabsContent = document.querySelectorAll('.tabs-section .product-info')
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.tab-mechanical').classList.add('active')
-  document.querySelector('.tab-mechanical').classList.add('cta-color')
+  if(document.querySelector('.tab-mechanical')) {
+    document.querySelector('.tab-mechanical').classList.add('active')
+    document.querySelector('.tab-mechanical').classList.add('cta-color')
+  }
 })
 
 if(transmTabs.length > 0) {
