@@ -4035,6 +4035,9 @@ margin-top: 10px;
   .form-cart-title {
     font-size: 24px;
   }
+  .footer-links-column {
+    width: 100%;
+  }
 }
 
 @media(max-width: 768px) {
@@ -4246,6 +4249,9 @@ margin-top: 10px;
   }
   .footer-contacts-column {
     align-items: center;
+  }
+  .footer-links-column {
+    width: inherit;
   }
 }
 
@@ -4670,5 +4676,11 @@ margin-top: 10px;
   }
   .footer-links li {
     font-size: 10px;
+  }
+  .APC-logo {
+    font-size: 40px;
+  }
+  .footer-logos {
+    height: 55px;
   }
 }
