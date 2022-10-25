@@ -276,7 +276,7 @@ if(phones) {
 
 // Управление увеличением изображения
 
-const zoomImgs = document.querySelectorAll('.product-zoom-img')
+const zoomImgs = document.querySelectorAll('.product-zoom-class')
 
 if (zoomImgs.length > 0) {
   zoomImgs.forEach(img => {
