@@ -320,6 +320,7 @@ if(transmTabs.length > 0) {
   transmTabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
 
+      e.preventDefault()
       tabsContent.forEach(tabContent => {
         tabContent.style.display = 'none'
       })
@@ -350,4 +351,39 @@ $('.certificates-grid').magnificPopup({
   // other options
 });
 
+// 
 
+const individual = document.getElementById('individual-label')
+const company = document.getElementById('company-label')
+const companyInputs = document.querySelector('.company-inputs')
+
+if(individual) {
+  individual.addEventListener('click', () => {
+    companyInputs.style.display = 'none'
+  })
+}
+
+if(company) {
+  company.addEventListener('click', () => {
+    companyInputs.style.display = 'flex'
+  })
+}
+
+const delivery = document.getElementById('delivery-btn')
+const pickup = document.getElementById('pickup-btn')
+const deliverInputs = document.querySelector('.delivery-inputs')
+const pickupAddress = document.querySelector('.feedback-item .contacts-item')
+
+if(delivery) {
+  delivery.addEventListener('click', () => {
+    deliverInputs.style.display = 'flex'
+    pickupAddress.style.display = 'none'
+  })
+}
+
+if(pickup) {
+  pickup.addEventListener('click', () => {
+    deliverInputs.style.display = 'none'
+    pickupAddress.style.display = 'block'
+  })
+}

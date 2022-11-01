@@ -100,7 +100,7 @@
           </div>
         </header>
       </div>
-      <section class="technologies inner-section inner-page-section">
+      <section class="technologies inner-page-section last-section">
         <div class="container">
           <div class="technologies-body">
             <div class="submenu-row">
@@ -129,9 +129,9 @@
                     Контактные данные:
                   </div>
                   <div class="feedback-item-inputs">
-                    <input type="text" placeholder="ФИО:">
-                    <input type="tel" class="phone" placeholder="Телефон:">
-                    <input type="email" placeholder="Email:">
+                    <input type="text" placeholder="ФИО:" name="name">
+                    <input type="tel" class="phone" placeholder="Телефон:" name="phone">
+                    <input type="email" placeholder="Email:" name="email">
                   </div>
                 </div>
                 <div class="feedback-item">
@@ -141,16 +141,16 @@
                   <div class="feedback-item-inputs feedback-item-radio-inputs">
                     <div class="feedback-radio">
                       <input type="radio" id="radio-company" name="add-info" value="company" checked>
-                      <label for="radio-company">Компания</label>
+                      <label for="radio-company" id="company-label">Компания</label>
                     </div>
                     <div class="feedback-radio">
                       <input type="radio" id="radio-individual" name="add-info" value="individual">
-                      <label for="radio-individual">Физическое лицо</label>
+                      <label for="radio-individual" id="individual-label">Физическое лицо</label>
                     </div>
                   </div>
-                  <div class="feedback-item-inputs">
-                    <input type="text" placeholder="Название:">
-                    <input type="number" placeholder="ИНН:">
+                  <div class="feedback-item-inputs company-inputs">
+                    <input type="text" placeholder="Название:" name="company-name">
+                    <input type="number" placeholder="ИНН:" name="inn">
                   </div>
                 </div>
                 <div class="feedback-item">
@@ -160,18 +160,26 @@
                   <div class="feedback-item-inputs feedback-item-radio-inputs">
                     <div class="feedback-radio">
                       <input type="radio" id="radio-delivery" name="delivery" value="delivery" checked>
-                      <label for="radio-delivery">Доставка</label>
+                      <label for="radio-delivery" id="delivery-btn">Доставка</label>
                     </div>
                     <div class="feedback-radio">
                       <input type="radio" id="radio-pickup" name="delivery" value="pickup">
-                      <label for="radio-pickup">Самовывоз</label>
+                      <label for="radio-pickup" id="pickup-btn">Самовывоз</label>
                     </div>
                   </div>
-                  <div class="feedback-item-inputs">
-                    <input type="number" placeholder="Индекс:">
-                    <input type="text" placeholder="Город:">
-                    <input type="text" placeholder="Улица:">
-                    <input type="text" placeholder="Дом:">
+                  <div class="feedback-item-inputs delivery-inputs">
+                    <input type="number" placeholder="Индекс:" name="index">
+                    <input type="text" placeholder="Город:" name="city">
+                    <input type="text" placeholder="Улица:" name="street">
+                    <input type="text" placeholder="Дом:" name="house">
+                  </div>
+                  <div class="contacts-item">
+                    <div class="contacts-title">
+                      Адрес:
+                    </div>
+                    <div class="contacts-text">
+                      OOO «АРС Моторс» 344090, Ростовская область, город Ростов-на-Дону, улица Доватора, дом 148, литера а, офис 224
+                    </div>
                   </div>
                 </div>
                 <div class="feedback-item">
