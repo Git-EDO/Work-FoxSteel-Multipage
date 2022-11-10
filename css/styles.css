@@ -227,7 +227,8 @@ body.lock {
 .success-notification {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 10px;
+  padding-top: 50px;
   right: 0;
   z-index: 100;
 }
